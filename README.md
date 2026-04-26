@@ -5,24 +5,42 @@ Written in pure Java (Swing), no external dependencies.
 
 ## Features
 
-- Random multiplication examples: `a × b = ?`
-- Customizable ranges for both multipliers (min–max)
-- Real‑time answer validation – turns green when correct
-- Stopwatch to track solving time (start with "Старт", stop with "Стоп")
-- Hint button shows the correct answer
-- Adjustable font size (text field or +/- buttons)
-- Default ranges: 2–44 for both numbers
-- Keyboard shortcuts:  
-  - `Enter` (while answer field is focused) – triggers check and moves to next?  
-    Actually, after correct answer, focus moves to "Next example" button; press `Enter` or `Space` to generate a new example.  
-  - `Ctrl+N` – generate next example immediately
-- User‑friendly messages and clear visual feedback
+- Customizable ranges for both multipliers
+- **Dual mode**: with or without stopwatch  
+  - **Untimed**: correct answer blocks the field (green), wait for "Next" button  
+  - **Timed**: correct answer instantly advances to the next example
+- Stopwatch to track exercise duration
+- Hint button reveals the correct answer
+- Adjustable font size (persisted across sessions)
+- **Norm counter** – set a goal, indicator shows progress (cyan/yellow/green)
+- **Last solved examples** – three most recent answers displayed vertically
+- **Statistics** – cumulative data saved locally:  
+  total solved, generated, time spent, max answer, session lengths, total uptime
+- **Easter egg** – rare hidden messages appear when numeric conditions met
+- **About** and **Stats** dialogs with resizable text
+- Saves and restores window position, size, and maximized state
+- All settings and stats stored in `%USERPROFILE%\.MathTrainer2\`
 
-## How to Run
+## Requirements
 
-1. Make sure you have **Java 8 or higher** installed.
-2. Download or clone the repository.
-3. Compile and run:
+- Java 21 or later (uses `java.awt.Desktop`, `java.time`)
+- Eclipse or any Java IDE
+
+## Build & Run
+
+1. Open project in your IDE
+2. Run `trainer.Main` as a Java application
+
+## License
+
+[The Unlicense](https://unlicense.org/)
+
+## Author
+
+Bizonrelax
+
+
+
 
 ```bash
 javac trainer/*.java
