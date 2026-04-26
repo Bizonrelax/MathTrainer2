@@ -1,79 +1,71 @@
 package trainer;
 
 import java.util.Random;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JOptionPane;
 
-/**
- * Логика тренажёра: генерация примеров, проверка ответов, работа с диапазонами.
- */
 public class MathTrainerLogic {
-    private int a, b;               // текущие множители
-    private int minA, maxA;         // диапазон для a
-    private int minB, maxB;         // диапазон для b
-    
+    private int a, b;
+    private int minA, maxA;
+    private int minB, maxB;
     private Random random = new Random();
-    
-    // Конструктор: устанавливает диапазоны по умолчанию
+
     public MathTrainerLogic() {
         setDefaultRanges();
-        generateNewExample(); // сразу генерируем пример
+        generateNewExample();
     }
-    
-    // Установка диапазонов по умолчанию: a=2..44, b=2..44
+
     public void setDefaultRanges() {
-        this.minA = 2;
+this.minA = 2;
         this.maxA = 44;
         this.minB = 2;
         this.maxB = 44;
     }
-    
-    // Установка пользовательских диапазонов (с автоматической корректировкой min/max)
+
     public void setRanges(int minA, int maxA, int minB, int maxB) {
-        // Корректировка: если min > max, меняем местами
-        if (minA > maxA) {
-            int temp = minA;
-            minA = maxA;
-            maxA = temp;
-        }
-        if (minB > maxB) {
-            int temp = minB;
-            minB = maxB;
-            maxB = temp;
-        }
+if (minA > maxA) { int t = minA; minA = maxA; maxA = t; }
+        if (minB > maxB) { int t = minB; minB = maxB; maxB = t; }
         this.minA = minA;
         this.maxA = maxA;
         this.minB = minB;
         this.maxB = maxB;
     }
-    
-    // Генерация нового примера в текущих диапазонах
+
     public void generateNewExample() {
-        a = random.nextInt(maxA - minA + 1) + minA;
+a = random.nextInt(maxA - minA + 1) + minA;
         b = random.nextInt(maxB - minB + 1) + minB;
     }
-    
-    // Получить текст примера для отображения
+
     public String getExampleText() {
-        return a + " x " + b + " =";
+return a + " x " + b + " =";
     }
-    
-    // Проверить ответ (строка от пользователя)
+
     public boolean checkAnswer(String answerText) {
-        try {
-            int answer = Integer.parseInt(answerText.trim());
-            return answer == (a * b);
+try {
+            int ans = Integer.parseInt(answerText.trim());
+            return ans == (a * b);
         } catch (NumberFormatException e) {
             return false;
         }
     }
-    
-    // Получить правильный ответ (число) для подсказки
+
     public int getCorrectAnswer() {
-        return a * b;
+return a * b;
     }
-    
-    // Геттеры для диапазонов (нужны для отображения в интерфейсе)
-    public int getMinA() { return minA; }
-    public int getMaxA() { return maxA; }
-    public int getMinB() { return minB; }
-    public int getMaxB() { return maxB; }
+
+    // Новые геттеры для пасхалки
+    public int getA() {
+return a; }
+    public int getB() {
+return b; }
+
+    public int getMinA() {
+return minA; }
+    public int getMaxA() {
+return maxA; }
+    public int getMinB() {
+return minB; }
+    public int getMaxB() {
+return maxB; }
 }
