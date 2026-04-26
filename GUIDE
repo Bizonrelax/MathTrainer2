@@ -1,0 +1,27 @@
+## Quick Guide
+
+### Basic usage
+1. The program starts with default ranges (2–44 for both multipliers).
+2. Enter your answer in the field and press Enter.
+3. Correct answers are recorded; counter and indicator reflect progress toward the norm.
+
+### Modes
+- **Without stopwatch** (default): after a correct answer, the field turns green and locks. Click «Следующий пример» (or press Enter/Space) to get a new example.
+- **With stopwatch**: press «Старт» to start the timer. After each correct answer, a new example appears automatically.
+
+### Settings
+- Change ranges in the «Диапазоны чисел» panel.
+- Set a target norm in the «Норма» field (saved automatically).
+- Use «+»/«-» buttons to adjust the font size (saved between sessions).
+- All settings survive program restart.
+
+### Statistics
+- Click «Стат» to view cumulative statistics.
+- Data is updated in real time; click «Обновить» to see the latest values.
+- «📂 Файлы» opens the folder with configuration and statistics files.
+
+### Tips
+- «Подсказка» reveals the correct answer for the current example.
+- «мин/макс по умолчанию» resets ranges to 2–44.
+- «Сбросить счётчик» resets the solved counter to 0.
+- The indicator shows your progress against the norm: cyan (0), yellow (below norm), green (reached or exceeded).
