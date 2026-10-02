@@ -4,7 +4,8 @@
 ___
 ___
 ___
-
+Чат целиком доступен по ссылке:
+https://share.google/aimode/Ty3htKNquPWcndkWw
 
 
 ## Чёткая граница между Б1 и Б2
